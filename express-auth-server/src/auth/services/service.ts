@@ -26,11 +26,11 @@ export default class AuthService {
     const secretKey = createSecretKey(process.env.JWT_SECRET, 'utf-8');
 
     // build token
-    const jwt = await new jose.SignJWT({ "urn:example:claim": true })
+    const jwt = await new jose.SignJWT({ "user_id":"secret_id" })
       .setProtectedHeader({ alg: "HS256" })
       .setIssuedAt()
-      .setIssuer("urn:example:issuer")
-      .setAudience("urn:example:audience")
+      .setIssuer("https://danjfreire.com")
+      .setAudience("danjfreire")
       .setExpirationTime("1h")
       .sign(secretKey);
 
