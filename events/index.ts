@@ -8,6 +8,7 @@ eventEmmiter.on('super', () => {
     console.log('this is super cool')
 })
 
+// event handler also support params
 eventEmmiter.on('param', (param) => {
     console.log('Param :', param)
 })
